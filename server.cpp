@@ -21,14 +21,14 @@ int main() {
 	puts("Server socket created!\n");	//successfully
 
 	in_addr iptonum;	//a structure for translate ip to numbers
-	obvEr = inet_pton(AF_INET, "192.168.1.81", &iptonum);
+	obvEr = inet_pton(AF_INET, "127.0.0.1", &iptonum);	// DON`T FORGET TO CHANGE IP AND PORT
 	puts("IP translated!\n");	//successfully
 
 	sockaddr_in servinfo;		//a structure that will keep server information
 	ZeroMemory(&servinfo, sizeof(servinfo));	//getting itself to know how big is it :)
 	servinfo.sin_family = AF_INET;		//setting all the details
 	servinfo.sin_addr = iptonum;
-	servinfo.sin_port = htons(8080);
+	servinfo.sin_port = htons(8080);			//PORT TO CHANGE ITSELF
 	puts("All details setted!\n");		//successfully
 
 	obvEr = bind(listener, (sockaddr*)&servinfo, sizeof(servinfo));		//binding
