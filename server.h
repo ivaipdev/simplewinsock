@@ -8,6 +8,7 @@
 #include <Windows.h>
 #include <iostream>
 #include <string>
+#include <sstream>
 #include <fstream>
 
 #pragma comment(lib, "Ws2_32.lib")
