@@ -101,7 +101,7 @@ int main() {
 	}
 	puts("HTML sent!\n");								//successfully
 	
-  obvEr = shutdown(clsocket, SD_SEND);					//shutting down our server, because there`s nothing else to do
+  	obvEr = shutdown(clsocket, SD_SEND);					//shutting down our server, because there`s nothing else to do
 	if (obvEr == SOCKET_ERROR) {
 		std::cerr << "Failed to shutdown>> " << WSAGetLastError() << std::endl;
 	}
